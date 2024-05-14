@@ -1,6 +1,6 @@
-cesium_version:=$(shell cat $(CURDIR)/docker/cesium-version.txt)
-checkout:=$(shell cat $(CURDIR)/docker/cts-checkout.txt)
-GOFILES:=$(shell find . -name '*.go')
+cesium_version:=$(cat $(CURDIR)/docker/cesium-version.txt)
+checkout:=$(cat $(CURDIR)/docker/cts-checkout.txt)
+GOFILES:=$(find . -name '*.go')
 
 GOBINDATA := $(GOPATH)/bin/go-bindata
 
