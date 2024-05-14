@@ -8,7 +8,8 @@
 checkout=`cat /tmp/cts-checkout.txt`
 archive="/tmp/local/cesium-terrain-server-${checkout}.tar.gz"
 if [ ! -f $archive ]; then
-    wget --no-verbose -O $archive "https://github.com/geo-data/cesium-terrain-server/archive/${checkout}.tar.gz" || exit 1
+    # wget --no-verbose -O $archive "https://github.com/geo-data/cesium-terrain-server/archive/${checkout}.tar.gz" || exit 1
+    wget --no-verbose -O $archive "https://github.com/geo-data/cesium-terrain-server/archive/master.tar.gz" || exit 1
 fi
 
 # Set up the source directory
