@@ -5,7 +5,8 @@
 #
 
 # If a local source code archive does not exist, get it from GitHub.
-checkout=`cat /tmp/cts-checkout.txt`
+#checkout=`cat /tmp/cts-checkout.txt`
+checkout="master"
 archive="/tmp/local/cesium-terrain-server-${checkout}.tar.gz"
 if [ ! -f $archive ]; then
     # wget --no-verbose -O $archive "https://github.com/geo-data/cesium-terrain-server/archive/${checkout}.tar.gz" || exit 1
