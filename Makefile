@@ -1,8 +1,7 @@
 cesium_version:=$(cat $(CURDIR)/docker/cesium-version.txt)
 checkout:=$(cat $(CURDIR)/docker/cts-checkout.txt)
 GOFILES:=$(find . -name '*.go')
-
-GOBINDATA := $(GOPATH)/bin/go-bindata
+GOBINDATA:= $(GOPATH)/bin/go-bindata
 
 install: $(GOFILES) assets/assets.go
 	go get ./... && go install ./...
